@@ -1,0 +1,19 @@
+<html>
+  <head>
+  
+  </head>
+  <body>
+  <script>
+    function pythag() {
+      var a = prompt("Need 'a' value");
+      var b = prompt("Need 'b' value");
+      var asq = a**2;
+      var bsq = b**2;
+      var csq = asq + bsq;
+      var c = Math.sqrt(csq).toFixed(3);
+      window.alert("c = "+c);
+    }
+  </script>
+  <button onclick="pythag()">Pythagorean Calculator</button>
+  </body>
+</html>
