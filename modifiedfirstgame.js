@@ -18,7 +18,7 @@ if (p1 == comp) {
   window.alert("You both win. Congrats")
 }
 else {
-  window.alert("Player One chose " + p1 + " and Player Two (computer) chose " + comp + " You both lose, grats");
+  window.alert("Player One chose " + p1 + " and Player Two (computer) chose " + comp + " You lose, better luck next time");
 }
 }
 
