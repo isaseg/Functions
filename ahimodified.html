@@ -1,0 +1,29 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <script>
+      var spicyAhi = {
+        fishType: "Ahi",
+        sauce: "Sriracha & Mayo",
+        price: 98.00,
+        rice: "White",
+        ounces: 8,
+      };
+      
+      function total() {
+        var qty = document.getElementById('amount').value;
+        var a = spicyAhi.price * qty;
+        var tax = 1.04712;
+        var b = a * tax;
+        document.getElementById('final').innerHTML = "You owe $" + b.toFixed(2);
+      }
+    </script>
+    <h1>How much do you want to buy?</h1>
+    <input type="number" id ="amount">
+    <button onclick="total()">Buy</button>
+    <hr>
+    <h1 id="final"></h1>
+  </body>
+</html>
