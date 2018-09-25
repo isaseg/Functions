@@ -6,10 +6,17 @@
   <li>DeVos</li>
   <li>Kavenaugh</li>
 </ul>
+<select id="assholes">
+  <option value="0">Trump</option>
+  <option value="1">Putin</option>
+  <option value="2">DeVos</option>
+  <option value="3">Kavenaugh</option>
+</select>
 <button onclick="removeItem()">Remove</button>
 <script>
 	function removeItem() {
-  var eliminate = document.getElementsByTagName('li')[0];
+  var assholes = document.getElementById('assholes').value;
+  var eliminate = document.getElementsByTagName('li')[assholes];
   var container = eliminate.parentNode;
   container.removeChild(eliminate);
   }
