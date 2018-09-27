@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <ol>
+      
+    </ol>
+    <select id="people"></select>
+    <button onclick="remove()">Remove</button>
+    <script>
+      var select = document.getElementById('people');
+      var arr = ["Hitler", "Ethan", "Trump"];
+      function populate() {
+        for(var i = 0; i < arr.length; i++) {
+          var opt = i + 1;
+          var el = document.createElement('option');
+          //textContent returns the html value
+          el.textContent = opt;
+          el.value = opt;
+          select.appendChild(el);
+          
+          //Add to list
+          var newLi = document.createElement('li');
+          var newText = document.createTextNode(arr[i]);
+          newLi.appendChild(newText);
+          var position = document.getElementsByTagName('ol')[0];
+          position.appendChild(newLi);
+        }
+      }
+      function remove() {
+        var getV = document.getElementById('people').value;
+        var getLi = document.getElementsByTagName('li')[getV - 1];
+        var getParent = getLi.parentNode;
+        getParent.removeChild(getLi);
+      }
+      
+    </script>
+    <script>populate()</script>
+  </body>
+</html>
