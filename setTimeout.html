@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-size: 200px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="kapow"></span>
+    <script>
+      function goBoom() {
+        var time = (Math.floor(Math.random() * 10000) + 1000);
+        setTimeout(function() {
+          document.getElementById('kapow').innerHTML = "Happy Halloween";
+          document.body.style.backgroundColor = "black";
+        },time);
+      }
+    </script>
+    <script>goBoom()</script>
+  </body>
+</html>
